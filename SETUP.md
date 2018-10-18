@@ -2,7 +2,7 @@ Set up Jenkins Github pull request builder
 ---
 
 - **Set up GitHub API Personal Access tokens.**
-  - Create or use an existing Github account that will be use to access repo. For example we'll use: "my_company_jenkins."
+  - Create or use an existing Github account that will be use to access repo. For this example we'll use: "my_company_jenkins."
   - Goto https://github.com/settings/tokens > Click Button: __Generate new token.__
         Token description: my_company_jenkins
 
