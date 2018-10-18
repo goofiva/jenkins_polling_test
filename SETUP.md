@@ -13,7 +13,7 @@ Set up Jenkins Github pull request builder
           ✓ public_repo
           ✓ repo:invite
 
-  - Copy the token somewhere, we'll be needing this later.
+  - Copy the Github API token somewhere, we'll be needing this later.
 
 
 - **Install Jenkins Plugin.**
