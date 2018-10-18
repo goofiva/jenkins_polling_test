@@ -11,6 +11,7 @@ Set up Jenkins Github pull request builder
           ✓ repo_deployment
           ✓ public_repo
           ✓ repo:invite
+          
   - Copy the token somewhere, we'll be needing this later.
 
 
@@ -25,6 +26,7 @@ Set up Jenkins Github pull request builder
     - GitHub Pull Request Builder
 
         - GitHub Auth
+        
               GitHub Server API URL: https://api.github.com
               Shared secret: my_company_jenkins's github api token
               Credentials: access tokens
@@ -32,6 +34,7 @@ Set up Jenkins Github pull request builder
 
       - Application Setup
         - Commit Status Build Result
+        
               - Build Result: SUCCESS
                 Message: It worked!
 
@@ -40,6 +43,7 @@ Set up Jenkins Github pull request builder
 
               - Build Result: FAILURE
                 Message: It failed!
+                
   - Goto Jenkins > Manage Jenkins > Configure System > GitHub Pull Request Builder > Click Button: __Advanced...__
         Crontab line: \*/5 \* \* \* \*
 
@@ -54,16 +58,25 @@ Set up Jenkins Github pull request builder
     - Source Code Management:
       - ✓ Select __Git__
         - Repositories
+        
               Repository URL: https://github.com/__username__/__repo__.git
               Credentials: __your-cred__
+              
           - Button: __Advanced...__
+
                 Name: origin
                 Refspec: +refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*
+
         - Branches to build
+        
               Branch Specifier: ${sha1}
+              
     - Build Triggers
       - ✓ Check __GitHub Pull Request Builder__
+      
             GitHub API credentials: https://api.github.com: my_company_jenkins
             Admin list: my_company_jenkins
+            
         - Click Button: __Advanced...__
+        
               Crontab line: \*/5 \* \* \* \*
