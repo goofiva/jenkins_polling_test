@@ -17,8 +17,8 @@ Set up Jenkins Github pull request builder
 
 
 - **Install Jenkins Plugin.**
-  - Goto Jenkins > Manage Jenkins > Manage Plugins > Select Available tab.
-  - Find and install GitHub Pull Request Builder.
+  - Goto Jenkins > Manage Jenkins > Manage Plugins > Select the __Available__ tab.
+  - Find and install __GitHub Pull Request Builder__.
     (NOTE: Ignore the security message, the problem has been addressed after versions 1.4.0)
 
 
