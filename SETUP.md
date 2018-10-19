@@ -57,7 +57,7 @@ Configure the jenkins job.
 ---
   - Goto Jenkins > JENKINS-PR-JOB-NAME > Configure
     - General
-      - ✓ Check GitHub project.
+      - ✓ Check __GitHub project__.
 
             Project url: https://github.com/__username__/__repo__
 
