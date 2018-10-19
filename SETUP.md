@@ -1,10 +1,10 @@
 Set up Jenkins Github pull request builder
----
+===
 
-- **Set up GitHub API Personal Access tokens.**
-  - Create or use an existing Github account that will be use to access repo. For this example we'll use: "my_company_jenkins."
+Set up GitHub API Personal Access tokens.
+---
+  - Create or use an existing Github account that will be use to access repo. For example we'll use: "my_company_jenkins."
   - Goto https://github.com/settings/tokens > Click Button: __Generate new token.__
-  
         Token description: my_company_jenkins
 
           ✓ repo
@@ -13,16 +13,18 @@ Set up Jenkins Github pull request builder
           ✓ public_repo
           ✓ repo:invite
 
-  - Copy the __Github API token__ somewhere, we'll be needing this later.
+  - Copy the token somewhere, we'll be needing this later.
 
 
-- **Install Jenkins Plugin.**
-  - Goto Jenkins > Manage Jenkins > Manage Plugins > Select the __Available__ tab.
-  - Find and install __GitHub Pull Request Builder__.
+Install Jenkins Plugin.
+---
+  - Goto Jenkins > Manage Jenkins > Manage Plugins > Select Available tab.
+  - Find and install GitHub Pull Request Builder.
     (NOTE: Ignore the security message, the problem has been addressed after versions 1.4.0)
 
 
-- **Set up GitHub Pull Request Builder Plugin.**
+Set up GitHub Pull Request Builder Plugin.
+---
   - Goto Jenkins > Manage Jenkins > Configure System > GitHub Pull Request Builder > Click Button: __Add__
     - GitHub Pull Request Builder
 
@@ -50,7 +52,8 @@ Set up Jenkins Github pull request builder
         Crontab line: \*/5 \* \* \* \*
 
 
-- **Configure the jenkins job.**
+Configure the jenkins job.
+---
   - Goto Jenkins > JENKINS-PR-JOB-NAME > Configure
     - General
       - ✓ Check GitHub project.
@@ -64,7 +67,7 @@ Set up Jenkins Github pull request builder
               Repository URL: https://github.com/__username__/__repo__.git
               Credentials: __your-cred__
 
-          - Click Button: __Advanced...__
+          - Button: __Advanced...__
 
                 Name: origin
                 Refspec: +refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*
