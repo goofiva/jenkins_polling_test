@@ -64,7 +64,7 @@ Set up Jenkins Github pull request builder
               Repository URL: https://github.com/__username__/__repo__.git
               Credentials: __your-cred__
 
-          - Button: __Advanced...__
+          - Click Button: __Advanced...__
 
                 Name: origin
                 Refspec: +refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*
