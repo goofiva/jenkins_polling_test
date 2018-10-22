@@ -50,7 +50,7 @@ Set up GitHub Pull Request Builder Plugin.
 
   - Goto Jenkins > Manage Jenkins > Configure System > GitHub Pull Request Builder > Click Button: __Advanced...__
 
-        Crontab line: \*/5 \* \* \* \*
+        Crontab line: */5 * * * *
 
 
 Configure the jenkins job.
@@ -85,4 +85,4 @@ Configure the jenkins job.
 
         - Click Button: __Advanced...__
 
-              Crontab line: \*/5 \* \* \* \*
+              Crontab line: */5 * * * *
